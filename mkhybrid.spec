@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://ftp.ge.ucl.ac.uk/pub/mkhfs/%{name}-%{version}.tar.gz
+# Source0-md5:	30de5a1cec363936f66bba0ba876fc65
 Patch0:		%{name}-install.patch
 BuildRequires:	autoconf
 BuildRequires:	automake

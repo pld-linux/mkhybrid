@@ -38,7 +38,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %attr(644, root, root, 755) %doc ChangeLog ChangeLog.mkhybrid README README.eltorito README.session README.mkhybrid TODO
 %attr(755, root, root) /usr/bin/*
-%attr(644, root,  man) %{_mandir}/man8/*
+%{_mandir}/man8/*
 
 %changelog
 * Sun Oct  4 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>

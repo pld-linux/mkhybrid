@@ -33,8 +33,6 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT mandir=%{_mandir}/man8
 
-strip $RPM_BUILD_ROOT%{_bindir}/*
-
 rm -f README.win32
 
 gzip -9nf ChangeLog ChangeLog.mkhybrid README* TODO \

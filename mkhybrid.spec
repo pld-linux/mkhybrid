@@ -4,20 +4,24 @@ Name:		mkhybrid
 Version:	1.12b5.2
 Release:	2
 License:	GPL
-Group:		Utilities/System
-Source:		ftp://ftp.ge.ucl.ac.uk/pub/mkhfs/%{name}-%{version}.tar.gz
-Patch:		mkhybrid-install.patch
+Group:		Applications/System
+Group(de):	Applikationen/System
+Group(pl):	Aplikacje/System
+Source0:	ftp://ftp.ge.ucl.ac.uk/pub/mkhfs/%{name}-%{version}.tar.gz
+Patch0:		%{name}-install.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description 
-mkhybrid  - create an hybrid ISO9660/JOLIET/HFS filesystem
-with optional Rock Ridge attributes. Includes support
-for making bootable "El Torito" CD-ROMs.
+mkhybrid - create an hybrid ISO9660/JOLIET/HFS filesystem with
+optional Rock Ridge attributes. Includes support for making bootable
+"El Torito" CD-ROMs.
 
 %description -l pl
-mkhybrid  - tworzy obraz mieszanego systemu plików ISO9660/Joliet/HFS z
-opcjonalnymi atrybutami rozszerzeñ Rock Ridge. Zawiera wsparcie dla tworzenia
-bootowalnych p³yt CD-ROM "El Torito".
+mkhybrid - tworzy obraz mieszanego systemu plików ISO9660/Joliet/HFS z
+opcjonalnymi atrybutami rozszerzeñ Rock Ridge. Zawiera wsparcie dla
+tworzenia bootowalnych p³yt CD-ROM "El Torito".
 
 %prep
 %setup -q
@@ -37,8 +41,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8}
 
 rm -f README.win32
 
-gzip -9nf ChangeLog ChangeLog.mkhybrid README* TODO \
-	$RPM_BUILD_ROOT%{_mandir}/man8/*
+gzip -9nf ChangeLog ChangeLog.mkhybrid README* TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT

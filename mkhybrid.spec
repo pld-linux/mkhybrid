@@ -39,13 +39,11 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8}
 
 rm -f README.win32
 
-gzip -9nf ChangeLog ChangeLog.mkhybrid README* TODO
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {ChangeLog,ChangeLog.mkhybrid,README*,TODO}.gz
+%doc ChangeLog ChangeLog.mkhybrid README* TODO
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man8/*

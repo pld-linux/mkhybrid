@@ -1,11 +1,12 @@
-Summary:     Creates an hybrid ISO9660/Joliet/HFSISO9660 filesystem image
-Summary(pl): Tworzy obraz mieszanego systemu plikow ISO9660/Joliet/HFSISO9660
-Name:        mkhybrid
-Version:     1.12b5.2
-Release:     1
-Copyright:   GPL
-Group:       Utilities/System
-Source:      ftp://ftp.ge.ucl.ac.uk/pub/mkhfs/%{name}-%{version}.tar.gz
+Summary:	Creates an hybrid ISO9660/Joliet/HFSISO9660 filesystem image
+Summary(pl):	Tworzy obraz mieszanego systemu plikow ISO9660/Joliet/HFSISO9660
+Name:		mkhybrid
+Version:	1.12b5.2
+Release:	1
+Copyright:	GPL
+Group:		Utilities/System
+Source:		ftp://ftp.ge.ucl.ac.uk/pub/mkhfs/%{name}-%{version}.tar.gz
+Patch:		mkhybrid-install.patch
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description 
@@ -20,6 +21,7 @@ bootowalnych p³yt CD-ROM "El Torito".
 
 %prep
 %setup -q
+%patch -p1
 
 %build
 %configure
@@ -27,15 +29,22 @@ make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/{bin,man/man8}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8}
 
-make prefix=$RPM_BUILD_ROOT/usr install
+make install DESTDIR=$RPM_BUILD_ROOT mandir=%{_mandir}/man8
+
 strip $RPM_BUILD_ROOT%{_bindir}/*
+
+rm -f README.win32
+
+gzip -9nf ChangeLog ChangeLog.mkhybrid README* TODO \
+	$RPM_BUILD_ROOT%{_mandir}/man8/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%attr(644,root,root,755) %doc ChangeLog ChangeLog.mkhybrid README README.eltorito README.session README.mkhybrid TODO
+%defattr(644,root,root,755)
+%doc {ChangeLog,ChangeLog.mkhybrid,README*,TODO}.gz
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man8/*

@@ -25,7 +25,7 @@ bootowalnych p³yt CD-ROM "El Torito".
 
 %build
 %configure
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT

@@ -22,8 +22,7 @@ bootowalnych p³yt CD-ROM "El Torito".
 %setup -q
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" ./configure \
-	--prefix=/usr
+%configure
 make
 
 %install

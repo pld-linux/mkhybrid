@@ -7,7 +7,7 @@ Copyright:	GPL
 Group:		Utilities/System
 Source:		ftp://ftp.ge.ucl.ac.uk/pub/mkhfs/%{name}-%{version}.tar.gz
 Patch:		mkhybrid-install.patch
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description 
 mkhybrid  - create an hybrid ISO9660/JOLIET/HFS filesystem

@@ -26,7 +26,7 @@ tworzenia bootowalnych p³yt CD-ROM "El Torito".
 %patch -p1
 
 %build
-aclocal
+%{__aclocal}
 %{__autoconf}
 %configure
 %{__make}

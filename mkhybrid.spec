@@ -30,14 +30,14 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/usr/{bin,man/man8}
 
 make prefix=$RPM_BUILD_ROOT/usr install
-strip $RPM_BUILD_ROOT/usr/bin/*
+strip $RPM_BUILD_ROOT%{_bindir}/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %attr(644, root, root, 755) %doc ChangeLog ChangeLog.mkhybrid README README.eltorito README.session README.mkhybrid TODO
-%attr(755, root, root) /usr/bin/*
+%attr(755, root, root) %{_bindir}/*
 %{_mandir}/man8/*
 
 %changelog

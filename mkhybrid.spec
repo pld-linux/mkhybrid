@@ -2,8 +2,8 @@ Summary:	Creates an hybrid ISO9660/Joliet/HFSISO9660 filesystem image
 Summary(pl):	Tworzy obraz mieszanego systemu plikow ISO9660/Joliet/HFSISO9660
 Name:		mkhybrid
 Version:	1.12b5.2
-Release:	1
-Copyright:	GPL
+Release:	2
+License:	GPL
 Group:		Utilities/System
 Source:		ftp://ftp.ge.ucl.ac.uk/pub/mkhfs/%{name}-%{version}.tar.gz
 Patch:		mkhybrid-install.patch
@@ -24,6 +24,8 @@ bootowalnych p³yt CD-ROM "El Torito".
 %patch -p1
 
 %build
+aclocal
+autoconf
 %configure
 %{__make}
 

@@ -39,12 +39,3 @@ rm -rf $RPM_BUILD_ROOT
 %attr(644,root,root,755) %doc ChangeLog ChangeLog.mkhybrid README README.eltorito README.session README.mkhybrid TODO
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man8/*
-
-%changelog
-* Sun Oct  4 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [1.12a4.7-1]
-- added fiew cleanups.
-
-* Sat Sep 26 1998 Piotr Grochowski <pager@dione.ids.pl>
-  [1.11.1]
-- First relase as a PLD package.

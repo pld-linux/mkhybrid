@@ -11,7 +11,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%description 
+%description
 mkhybrid - create an hybrid ISO9660/JOLIET/HFS filesystem with
 optional Rock Ridge attributes. Includes support for making bootable
 "El Torito" CD-ROMs.

@@ -5,8 +5,6 @@ Version:	1.12b5.2
 Release:	2
 License:	GPL
 Group:		Applications/System
-Group(de):	Applikationen/System
-Group(pl):	Aplikacje/System
 Source0:	ftp://ftp.ge.ucl.ac.uk/pub/mkhfs/%{name}-%{version}.tar.gz
 Patch0:		%{name}-install.patch
 BuildRequires:	autoconf

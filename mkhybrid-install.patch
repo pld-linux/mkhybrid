@@ -1,0 +1,20 @@
+diff -ur mkhybrid-1.12b5.2.orig/Makefile.in mkhybrid-1.12b5.2/Makefile.in
+--- mkhybrid-1.12b5.2.orig/Makefile.in	Tue Mar 16 23:17:02 1999
++++ mkhybrid-1.12b5.2/Makefile.in	Mon Jul 19 21:40:00 1999
+@@ -68,11 +68,11 @@
+ apple_driver.o: apple_driver.c mac_label.h
+ 	$(CC) -c $(CFLAGS) $(srcdir)/apple_driver.c
+ 
+-install: mkisofs mkisofs.8
+-	[ -d $(bindir) ] || mkdir $(bindir)
+-	[ -d $(mandir) ] || mkdir $(mandir)
+-	$(INSTALL_PROGRAM) mkhybrid $(bindir)/mkhybrid
+-	-$(INSTALL_DATA) $(srcdir)/mkhybrid.8 $(mandir)/mkhybrid.$(manext)
++install: mkhybrid mkhybrid.8
++	[ -d $(bindir) ] || mkdir $(DESTDIR)$(bindir)
++	[ -d $(mandir) ] || mkdir $(DESTDIR)$(mandir)
++	$(INSTALL_PROGRAM) mkhybrid $(DESTDIR)$(bindir)/mkhybrid
++	-$(INSTALL_DATA) $(srcdir)/mkhybrid.8 $(DESTDIR)$(mandir)/mkhybrid.$(manext)
+ 
+ tree.o: tree.c mkisofs.h iso9660.h exclude.h config.h Makefile
+ 	$(CC) -c $(CFLAGS) $(srcdir)/tree.c

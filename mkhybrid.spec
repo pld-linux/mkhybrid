@@ -1,7 +1,7 @@
 Summary:     Creates an hybrid ISO9660/Joliet/HFSISO9660 filesystem image
 Summary(pl): Tworzy obraz mieszanego systemu plikow ISO9660/Joliet/HFSISO9660
 Name:        mkhybrid
-Version:     1.12a4.7
+Version:     1.12b5.2
 Release:     1
 Copyright:   GPL
 Group:       Utilities/System

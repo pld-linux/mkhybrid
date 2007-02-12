@@ -1,5 +1,5 @@
 Summary:	Creates an hybrid ISO9660/Joliet/HFSISO9660 filesystem image
-Summary(pl):	Tworzy obraz mieszanego systemu plikow ISO9660/Joliet/HFSISO9660
+Summary(pl.UTF-8):   Tworzy obraz mieszanego systemu plikow ISO9660/Joliet/HFSISO9660
 Name:		mkhybrid
 Version:	1.12b5.2
 Release:	2
@@ -17,10 +17,10 @@ mkhybrid - create an hybrid ISO9660/JOLIET/HFS filesystem with
 optional Rock Ridge attributes. Includes support for making bootable
 "El Torito" CD-ROMs.
 
-%description -l pl
-mkhybrid - tworzy obraz mieszanego systemu plikÛw ISO9660/Joliet/HFS z
-opcjonalnymi atrybutami rozszerzeÒ Rock Ridge. Zawiera wsparcie dla
-tworzenia bootowalnych p≥yt CD-ROM "El Torito".
+%description -l pl.UTF-8
+mkhybrid - tworzy obraz mieszanego systemu plik√≥w ISO9660/Joliet/HFS z
+opcjonalnymi atrybutami rozszerze≈Ñ Rock Ridge. Zawiera wsparcie dla
+tworzenia bootowalnych p≈Çyt CD-ROM "El Torito".
 
 %prep
 %setup -q
